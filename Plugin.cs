@@ -203,13 +203,12 @@ namespace HaremPOV
                 return;
             }
 
-
             currentChar = characters[currentCharIndex];
             if(!currentChar.isFemale)
             {
-                if(((CharMale)(currentChar.chara)).GetBlueMan())
+                isBlueMan = ((CharMale)(currentChar.chara)).GetBlueMan();
+                if(isBlueMan)
                 {
-                    isBlueMan = true;
                     ((CharMale)(currentChar.chara)).ChangeBlueMan(false);
                 }
             }
